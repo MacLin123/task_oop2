@@ -2,6 +2,7 @@ package com.mycompany;
 
 /**
  * This class is serve to model the movement of the ball
+ *
  * @author Mikhail Kurakin
  */
 public class Ball {

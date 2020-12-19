@@ -2,9 +2,10 @@ package com.mycompany;
 
 /**
  * Entry point to test Ball class with Containter class
+ *
+ * @author Mikhail Kurakin
  * @see Ball
  * @see Container
- * @author Mikhail Kurakin
  */
 public class Main {
     public static void main(String[] args) {

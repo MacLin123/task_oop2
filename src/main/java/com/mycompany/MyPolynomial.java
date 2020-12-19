@@ -1,6 +1,8 @@
 package com.mycompany;
+
 /**
  * This class provides the ability to work with Polynomials
+ *
  * @author Mikhail Kurakin
  */
 public class MyPolynomial {

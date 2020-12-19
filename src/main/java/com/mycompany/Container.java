@@ -1,8 +1,10 @@
 package com.mycompany;
+
 /**
  * This class is serve to test Ball class
- * @see Ball
+ *
  * @author Mikhail Kurakin
+ * @see Ball
  */
 public class Container {
     int x1;
