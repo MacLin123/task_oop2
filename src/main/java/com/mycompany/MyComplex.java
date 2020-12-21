@@ -1,7 +1,10 @@
 package com.mycompany;
 
+import java.util.Objects;
+
 /**
  * This class provides the ability to work with complex numbers
+ *
  * @author Mikhail Kurakin
  */
 
@@ -60,6 +63,11 @@ public class MyComplex {
     public boolean equals(MyComplex another) {
         if (this == another) return true;
         return equals(another.real, another.imag);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(real, imag);
     }
 
     public double magnitude() {
