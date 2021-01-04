@@ -65,11 +65,6 @@ public class MyComplex {
         return equals(another.real, another.imag);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(real, imag);
-    }
-
     public double magnitude() {
         return Math.sqrt(Math.pow(real, 2) + Math.pow(imag, 2));
     }
@@ -129,5 +124,27 @@ public class MyComplex {
     MyComplex conjugate() {
         imag = -imag;
         return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyComplex myComplex = (MyComplex) o;
+
+        if (Double.compare(myComplex.real, real) != 0) return false;
+        return Double.compare(myComplex.imag, imag) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(real);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(imag);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 }

@@ -1,5 +1,7 @@
 package com.mycompany;
 
+import java.util.Arrays;
+
 /**
  * This class provides the ability to work with Polynomials
  *
@@ -57,5 +59,20 @@ public class MyPolynomial {
             }
         }
         return new MyPolynomial(resCoeffs);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyPolynomial that = (MyPolynomial) o;
+
+        return Arrays.equals(coeffs, that.coeffs);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(coeffs);
     }
 }
